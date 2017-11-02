@@ -3,5 +3,6 @@
 
 def key_for_min_value(hash)
   min = hash.first
-  hash.each {|k, v| v <= min[1] ? min[1] = v : nil}
+  hash.each {|k, v| v <= min[1] ? min = [k, v] : nil}
+  k
 end
